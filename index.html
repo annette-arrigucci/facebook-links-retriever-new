@@ -86,7 +86,7 @@
         'Thanks for logging in, ' + response.name + '!';
       //getAlert();
     });
-    FB.api('me/feed', function(response) {
+    FB.api('me/posts', function(response) {
       if (response && !response.error){
       		alert(response.data);
       }

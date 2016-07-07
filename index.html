@@ -84,7 +84,11 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-      alert(response.name);
+      //getAlert();
+    });
+    FB.api('/me/feed', function(response) {
+      document.getElementById('#my-links-feed').innerHTML =
+        response[0].id;
       //getAlert();
     });
   }
@@ -133,7 +137,7 @@
 			</form>
 		</div>
 	</div>
-		<div class="links-feed">
+		<div class="links-feed" id="my-links-feed">
 		<h1>Link feed<br>(from past 7 days)</h1>
 		
 

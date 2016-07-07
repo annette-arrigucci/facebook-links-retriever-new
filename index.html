@@ -86,9 +86,9 @@
         'Thanks for logging in, ' + response.name + '!';
       //getAlert();
     });
-    FB.api('/me/posts', function(response) {
+    FB.api('me/feed?fields=link,caption,id,picture', function(response) {
       if (response && !response.error){
-      		alert(response[0].id);
+      		alert(response.[0].link);
       }
       //getAlert();
     });
